@@ -44,4 +44,38 @@ const bookStore = {
 }
 
 // Write your code here!
+document.getElementById('h1')
+// manipuaation
+
+const bookStoreTitle = document.getElementById('header')
+
+bookStoreTitle.innerHTML = bookStore.name
+
+// select <ul> element from index.html
+
+const bookList = document.getElementById('book-list')
+
+// LOOP THROUGH EACH BOOK
+bookStore.books.forEach(book => { 
+    
+    // ELEMENTS FOR EACH BOOK
+const bookContainer = document.createElement('li');
+const bookTitle = document.createElement('h3');
+const bookAuthor = document.createElement('p');
+const bookImage = document.createElement('img');
+
+// SET THE CONTENT OF EACH ELEMENT
+bookTitle.textContent = book.title;
+bookAuthor.textContent = book.author;
+bookImage.src = book.imageUrl;
+
+// APPEND ELEMENTS TO THE BOOK CONTAINER
+bookContainer.appendChild(bookTitle);
+bookContainer.appendChild(bookAuthor);
+bookContainer.appendChild(bookImage);
+  
+bookList.appendChild(bookContainer);
+
+});
+
 
