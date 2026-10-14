@@ -57,7 +57,7 @@ const bookList = document.getElementById('book-list')
 
 // LOOP THROUGH EACH BOOK
 bookStore.books.forEach(book => { 
-    
+
     // ELEMENTS FOR EACH BOOK
 const bookContainer = document.createElement('li');
 const bookTitle = document.createElement('h3');
@@ -76,6 +76,13 @@ bookContainer.appendChild(bookImage);
   
 bookList.appendChild(bookContainer);
 
+
 });
+
+// BONUS CHALLENGE: Delete Element (Outside the loop!)
+const elementToDelete = document.getElementById('delete-this');
+if (elementToDelete) {
+    elementToDelete.remove();
+}
 
 
